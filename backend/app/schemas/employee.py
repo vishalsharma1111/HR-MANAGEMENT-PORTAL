@@ -46,7 +46,7 @@ class EmployeeCreate(EmployeeBase):
     employee_id: Optional[str] = None # Auto-generated if omitted
     create_user_account: bool = True
     user_role: Optional[str] = "Employee"
-    user_password: Optional[str] = "Enterprise@2026"
+    user_password: Optional[str] = None
 
 class EmployeeUpdate(BaseModel):
     first_name: Optional[str] = None

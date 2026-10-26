@@ -1,4 +1,5 @@
 import math
+import secrets
 from datetime import date, datetime
 from typing import Optional, List
 from fastapi import APIRouter, Depends, HTTPException, Query, status
@@ -170,9 +171,10 @@ def create_employee(
         if existing_user:
             user_id = existing_user.id
         else:
+            initial_password = emp_data.user_password if emp_data.user_password else secrets.token_urlsafe(12)
             new_user = User(
                 email=emp_data.email,
-                hashed_password=get_password_hash(emp_data.user_password or "Enterprise@2026"),
+                hashed_password=get_password_hash(initial_password),
                 full_name=f"{emp_data.first_name} {emp_data.last_name}",
                 role=emp_data.user_role or RoleEnum.EMPLOYEE.value,
                 is_active=True,

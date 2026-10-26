@@ -15,19 +15,25 @@
 
 ---
 
-## 2. Default Seed Personas (7 Enterprise Roles)
+## 2. Demonstration User Accounts (Role-Based Access)
 
-All personas are seeded with default password: `Enterprise@2026`
+For local development and demonstration, user accounts are provisioned with the following roles and naming convention. Passwords follow the demo standard `<FirstName>@123` (hashed with bcrypt):
 
-| Persona Name | Email | Role | Department | Access Level |
+| Display Name | Email | Role | Department | Access Level |
 |--------------|-------|------|------------|--------------|
-| **Arthur Pendelton** | `admin@enterprisehrms.com` | **Super Admin** | Executive Leadership | Full system governance, all departments, all settings |
-| **Sarah Jenkins** | `sarah.jenkins@enterprisehrms.com` | **HR Manager** | Human Resources | Full workforce directory, onboarding, policies, documents |
-| **Marcus Vance** | `marcus.vance@enterprisehrms.com` | **Department Manager** | Software Engineering | Isolated access to Engineering employees & approvals |
-| **Alex Chen** | `alex.chen@enterprisehrms.com` | **Employee** | Software Engineering | Self-service profile, documents, tasks, org chart |
-| **Elena Rostova** | `elena.rostova@enterprisehrms.com` | **Recruiter** | Human Resources | Employee directory, hiring pipelines |
-| **David Miller** | `david.miller@enterprisehrms.com` | **Payroll Officer** | Finance & Payroll | Fiscal records, compensation, final settlement |
-| **Rachel Green** | `rachel.green@enterprisehrms.com` | **IT Administrator** | Information Technology | Asset register, hardware provisioning, system audit |
+| **Vishal Sharma** | `admin@enterprisehrms.com` | **Super Admin** | Executive Leadership | Full system governance, all departments, security settings |
+| **Vishu Soam** | `vishu.soam@enterprisehrms.com` | **HR Manager** | Human Resources | Full workforce directory, onboarding, policies, documents, leave approvals |
+| **Yash Sharma** | `yash.sharma@enterprisehrms.com` | **Department Manager** | Software Engineering | Department-isolated access to Engineering employees & approvals |
+| **Vishal Maurya** | `vishal.maurya@enterprisehrms.com` | **Recruiter** | Human Resources | Candidate pipelines, job requisitions, interview scorecards |
+| **Vishal Bhardwaj** | `vishal.bhardwaj@enterprisehrms.com` | **Payroll Officer** | Finance & Payroll | Fiscal structures, compensation runs, payslips, full & final settlements |
+| **Aman** | `aman@enterprisehrms.com` | **Employee** | Software Engineering | Self-service portal, own attendance, leaves, payslips, goals |
+| **Vishnu** | `vishnu@enterprisehrms.com` | **Employee** | Software Engineering | Self-service portal, tasks, attendance check-in/out |
+| **Yash Bhardwaj** | `yash.bhardwaj@enterprisehrms.com` | **Employee** | Product Management | Self-service portal, timesheets, course enrollments |
+| **Rohini** | `rohini@enterprisehrms.com` | **Employee** | Software Engineering | Self-service portal, onboarding workflows |
+| **Rachel Green** | `rachel.green@enterprisehrms.com` | **IT Administrator** | Information Technology | Asset register, hardware provisioning, helpdesk resolution |
+
+> [!NOTE]
+> Demo passwords use the convention `<FirstName>@123` for local evaluation only. Passwords are never stored in plaintext and are hashed via bcrypt with salt. In production, password resets are strictly enforced.
 
 ---
 

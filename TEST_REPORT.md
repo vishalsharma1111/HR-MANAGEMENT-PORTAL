@@ -242,8 +242,37 @@ Strict automated database inspection executed via `backend/audit_verification.py
 - **AI Assistant & LLM Grounding**:
   - AI Assistant Bot and Talent Insights are explicitly designated for Phase 3.
   - Verified UI routes (`/planned/ai-insights`, `/planned/hr-assistant`) render blueprints and planned status without claiming simulated or fake LLM execution in Phase 2.
-- **Defects & Blockers**:
-  - Total Defects Identified: 11
-  - Total Defects Resolved: 11
-  - Remaining Open Defects: 0
-  - Remaining Blockers: 0
+---
+
+## Demonstration User Accounts Modernization & Private Data Security Audit
+
+### 1. Demonstration Accounts Provisioning & Verification
+All 9 demonstration user accounts were migrated, hashed with bcrypt (`rounds=6` in demo/test mode), and verified via live authentication on `http://127.0.0.1:8000/api/auth/login`:
+- **HR / Super Admin**: `admin@enterprisehrms.com` | Display Name: **Vishal Sharma** | Role: `Super Admin` -> VERIFIED (HTTP 200, JWT token issued)
+- **HR Manager**: `vishu.soam@enterprisehrms.com` | Display Name: **Vishu Soam** | Role: `HR Manager` -> VERIFIED (HTTP 200, JWT token issued)
+- **Department Manager**: `yash.sharma@enterprisehrms.com` | Display Name: **Yash Sharma** | Role: `Department Manager` -> VERIFIED (HTTP 200, JWT token issued)
+- **Recruiter**: `vishal.maurya@enterprisehrms.com` | Display Name: **Vishal Maurya** | Role: `Recruiter` -> VERIFIED (HTTP 200, JWT token issued)
+- **Payroll Officer**: `vishal.bhardwaj@enterprisehrms.com` | Display Name: **Vishal Bhardwaj** | Role: `Payroll Officer` -> VERIFIED (HTTP 200, JWT token issued)
+- **Employee**: `aman@enterprisehrms.com` | Display Name: **Aman** | Role: `Employee` -> VERIFIED (HTTP 200, JWT token issued)
+- **Employee**: `vishnu@enterprisehrms.com` | Display Name: **Vishnu** | Role: `Employee` -> VERIFIED (HTTP 200, JWT token issued)
+- **Employee**: `yash.bhardwaj@enterprisehrms.com` | Display Name: **Yash Bhardwaj** | Role: `Employee` -> VERIFIED (HTTP 200, JWT token issued)
+- **Employee**: `rohini@enterprisehrms.com` | Display Name: **Rohini** | Role: `Employee` -> VERIFIED (HTTP 200, JWT token issued)
+
+### 2. Removal of Quick Demo Role Logins & Public Credential Exposure
+- Verified that the entire "QUICK DEMO ROLE LOGINS" section was removed from `LoginPage.tsx`.
+- Verified that one-click evaluation cards, auto-sign-in buttons, public credential hints, and pre-filled passwords were removed.
+- Codebase string search across all frontend files confirmed 0 occurrences of demo credentials, hardcoded passwords, or debug personas.
+- Form inputs default to empty strings (or remembered email only).
+
+### 3. Server-Side Security & Privilege Escalation Prevention
+- **Unauthenticated Route Protection**: Probed `/api/employees`, `/api/payroll/runs`, `/api/leave/applications`, `/api/auth/personas`, and `/api/auth/switch-persona/1` without JWT header; all returned HTTP 401 Unauthorized.
+- **Privilege Escalation Prevention**: Employee (`aman@enterprisehrms.com`) attempting to call `/api/auth/switch-persona/1` was strictly blocked with HTTP 403 Forbidden.
+- **Cross-User Data Isolation**: Employee (`aman@enterprisehrms.com`) attempting to query peer payslip 1 was blocked with HTTP 403 Forbidden; querying `/api/payroll/payslips` returned only own records (1 payslip, Net Pay $12,100).
+- **Recruiter Payroll Barrier**: Recruiter (`vishal.maurya@enterprisehrms.com`) attempting to access `/api/payroll/runs` was blocked with HTTP 403 Forbidden.
+- **Administrator Role Simulation**: Only authenticated Super Admin (`admin@enterprisehrms.com`) is authorized to access `/api/auth/personas` and `/api/auth/switch-persona/{id}` for system testing.
+
+### 4. Automated Backend Test Suite Results
+- Test Command: `python -m pytest tests/`
+- Outcome: **49 passed, 0 failed, 582 warnings in 5.08s (100% pass rate)**.
+- Frontend Build: `tsc -b && vite build` transformed 2,547 modules in 21.15s with **0 errors**.
+

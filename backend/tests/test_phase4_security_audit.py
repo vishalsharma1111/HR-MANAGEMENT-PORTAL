@@ -28,21 +28,21 @@ def test_tampered_token_rejected(client):
 
 def test_employee_cross_payslip_isolation(client):
     """Verify an employee cannot access another employee's payslip or payroll records."""
-    # 1. Login as Alex Chen (Employee ID: 4)
+    # 1. Login as Aman (Employee ID: 4)
     emp_login = client.post("/api/auth/login", json={
-        "email": "alex.chen@enterprisehrms.com",
-        "password": "Enterprise@2026"
+        "email": "aman@enterprisehrms.com",
+        "password": "Aman@123"
     })
     emp_token = emp_login.json()["access_token"]
     emp_headers = {"Authorization": f"Bearer {emp_token}"}
 
-    # 2. Query payslips - Alex Chen should only receive own payslips
+    # 2. Query payslips - Aman should only receive own payslips
     res = client.get("/api/payroll/payslips", headers=emp_headers)
     assert res.status_code == 200
     payslips = res.json()
     assert len(payslips) > 0
     for p in payslips:
-        assert p["employee_name"] == "Alex Chen"
+        assert p["employee_name"] == "Aman"
 
     # 3. Attempt to fetch another employee's payslip directly by ID (payslip 1 belongs to admin) -> 403
     forbidden_res = client.get("/api/payroll/payslips/1", headers=emp_headers)
@@ -51,8 +51,8 @@ def test_employee_cross_payslip_isolation(client):
 def test_recruiter_blocked_from_payroll(client):
     """Verify Recruiter persona is strictly blocked from sensitive payroll structures and runs."""
     recruiter_login = client.post("/api/auth/login", json={
-        "email": "elena.rostova@enterprisehrms.com",
-        "password": "Enterprise@2026"
+        "email": "vishal.maurya@enterprisehrms.com",
+        "password": "Vishal@123"
     })
     rec_token = recruiter_login.json()["access_token"]
     rec_headers = {"Authorization": f"Bearer {rec_token}"}
@@ -66,8 +66,8 @@ def test_recruiter_blocked_from_payroll(client):
 def test_unauthorized_user_cannot_approve_leave(client):
     """Verify standard employees cannot approve or reject leave applications."""
     emp_login = client.post("/api/auth/login", json={
-        "email": "alex.chen@enterprisehrms.com",
-        "password": "Enterprise@2026"
+        "email": "aman@enterprisehrms.com",
+        "password": "Aman@123"
     })
     emp_headers = {"Authorization": f"Bearer {emp_login.json()['access_token']}"}
 
@@ -78,10 +78,10 @@ def test_unauthorized_user_cannot_approve_leave(client):
     assert review_res.status_code == 403
 
 def test_department_manager_access_isolation(client):
-    """Verify Department Manager (Marcus Vance) only views employees in Software Engineering."""
+    """Verify Department Manager (Yash Sharma) only views employees in Software Engineering."""
     mgr_login = client.post("/api/auth/login", json={
-        "email": "marcus.vance@enterprisehrms.com",
-        "password": "Enterprise@2026"
+        "email": "yash.sharma@enterprisehrms.com",
+        "password": "Yash@123"
     })
     mgr_headers = {"Authorization": f"Bearer {mgr_login.json()['access_token']}"}
 
@@ -97,7 +97,7 @@ def test_sensitive_credentials_never_exposed(client):
     """Verify hashed passwords or confidential internal tokens are not exposed in serialized responses."""
     admin_login = client.post("/api/auth/login", json={
         "email": "admin@enterprisehrms.com",
-        "password": "Enterprise@2026"
+        "password": "Vishal@123"
     })
     admin_headers = {"Authorization": f"Bearer {admin_login.json()['access_token']}"}
 
@@ -116,7 +116,7 @@ def test_self_service_forgot_password_flow(client):
     """Verify timing-safe self-service password recovery."""
     # Existing user
     res_valid = client.post("/api/auth/forgot-password", json={
-        "email": "sarah.jenkins@enterprisehrms.com"
+        "email": "vishu.soam@enterprisehrms.com"
     })
     assert res_valid.status_code == 200
     assert "instructions have been dispatched" in res_valid.json()["message"]
@@ -132,18 +132,18 @@ def test_deactivated_account_blocked(client):
     """Verify deactivated user accounts cannot log in."""
     admin_login = client.post("/api/auth/login", json={
         "email": "admin@enterprisehrms.com",
-        "password": "Enterprise@2026"
+        "password": "Vishal@123"
     })
     admin_headers = {"Authorization": f"Bearer {admin_login.json()['access_token']}"}
 
-    # Deactivate employee user (David Miller, id=6)
+    # Deactivate employee user (Vishal Bhardwaj, id=6)
     toggle_res = client.put("/api/auth/users/6/status?is_active=false", headers=admin_headers)
     assert toggle_res.status_code == 200
 
     # Attempt login as deactivated user -> 403
     deactivated_login = client.post("/api/auth/login", json={
-        "email": "david.miller@enterprisehrms.com",
-        "password": "Enterprise@2026"
+        "email": "vishal.bhardwaj@enterprisehrms.com",
+        "password": "Vishal@123"
     })
     assert deactivated_login.status_code == 403
     assert "deactivated" in deactivated_login.json()["detail"].lower()
@@ -156,7 +156,7 @@ def test_admin_self_deactivation_blocked(client):
     """Verify administrators cannot accidentally deactivate their own account."""
     admin_login = client.post("/api/auth/login", json={
         "email": "admin@enterprisehrms.com",
-        "password": "Enterprise@2026"
+        "password": "Vishal@123"
     })
     admin_id = admin_login.json()["user"]["id"]
     admin_headers = {"Authorization": f"Bearer {admin_login.json()['access_token']}"}

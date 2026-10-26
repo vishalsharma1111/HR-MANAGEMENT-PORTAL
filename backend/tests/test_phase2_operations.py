@@ -4,8 +4,8 @@ from datetime import date, datetime, timedelta
 def test_attendance_checkin_checkout_flow(client):
     # Log in as Alex Chen (EMP-0004)
     login_resp = client.post("/api/auth/login", json={
-        "email": "alex.chen@enterprisehrms.com",
-        "password": "Enterprise@2026"
+        "email": "aman@enterprisehrms.com",
+        "password": "Aman@123"
     })
     token = login_resp.json()["access_token"]
     headers = {"Authorization": f"Bearer {token}"}
@@ -35,8 +35,8 @@ def test_attendance_checkin_checkout_flow(client):
 def test_attendance_correction_workflow(client):
     # Alex Chen applies for a correction
     alex_token = client.post("/api/auth/login", json={
-        "email": "alex.chen@enterprisehrms.com",
-        "password": "Enterprise@2026"
+        "email": "aman@enterprisehrms.com",
+        "password": "Aman@123"
     }).json()["access_token"]
     alex_headers = {"Authorization": f"Bearer {alex_token}"}
 
@@ -55,8 +55,8 @@ def test_attendance_correction_workflow(client):
 
     # Marcus Vance (Manager) reviews and approves correction
     marcus_token = client.post("/api/auth/login", json={
-        "email": "marcus.vance@enterprisehrms.com",
-        "password": "Enterprise@2026"
+        "email": "yash.sharma@enterprisehrms.com",
+        "password": "Yash@123"
     }).json()["access_token"]
     marcus_headers = {"Authorization": f"Bearer {marcus_token}"}
 
@@ -69,8 +69,8 @@ def test_attendance_correction_workflow(client):
 
 def test_leave_application_and_overlap_validation(client):
     alex_token = client.post("/api/auth/login", json={
-        "email": "alex.chen@enterprisehrms.com",
-        "password": "Enterprise@2026"
+        "email": "aman@enterprisehrms.com",
+        "password": "Aman@123"
     }).json()["access_token"]
     alex_headers = {"Authorization": f"Bearer {alex_token}"}
 
@@ -110,8 +110,8 @@ def test_leave_application_and_overlap_validation(client):
 def test_leave_approval_workflow_syncs_to_attendance(client):
     # Alex Chen applies for 1-day leave
     alex_token = client.post("/api/auth/login", json={
-        "email": "alex.chen@enterprisehrms.com",
-        "password": "Enterprise@2026"
+        "email": "aman@enterprisehrms.com",
+        "password": "Aman@123"
     }).json()["access_token"]
     alex_headers = {"Authorization": f"Bearer {alex_token}"}
 
@@ -131,8 +131,8 @@ def test_leave_approval_workflow_syncs_to_attendance(client):
 
     # Manager (Marcus Vance) reviews & approves -> final approval and syncs with attendance
     marcus_token = client.post("/api/auth/login", json={
-        "email": "marcus.vance@enterprisehrms.com",
-        "password": "Enterprise@2026"
+        "email": "yash.sharma@enterprisehrms.com",
+        "password": "Yash@123"
     }).json()["access_token"]
     marcus_headers = {"Authorization": f"Bearer {marcus_token}"}
 
@@ -146,8 +146,8 @@ def test_leave_approval_workflow_syncs_to_attendance(client):
 def test_monthly_payroll_run_processing(client):
     # Payroll Officer (David Miller)
     david_token = client.post("/api/auth/login", json={
-        "email": "david.miller@enterprisehrms.com",
-        "password": "Enterprise@2026"
+        "email": "vishal.bhardwaj@enterprisehrms.com",
+        "password": "Vishal@123"
     }).json()["access_token"]
     david_headers = {"Authorization": f"Bearer {david_token}"}
 
@@ -181,7 +181,7 @@ def test_monthly_payroll_run_processing(client):
     # Super Admin approves the payroll run
     admin_token = client.post("/api/auth/login", json={
         "email": "admin@enterprisehrms.com",
-        "password": "Enterprise@2026"
+        "password": "Vishal@123"
     }).json()["access_token"]
     admin_headers = {"Authorization": f"Bearer {admin_token}"}
 
@@ -192,8 +192,8 @@ def test_monthly_payroll_run_processing(client):
 def test_recruitment_pipeline_and_hire_onboard_conversion(client):
     # Recruiter (Elena Rostova)
     elena_token = client.post("/api/auth/login", json={
-        "email": "elena.rostova@enterprisehrms.com",
-        "password": "Enterprise@2026"
+        "email": "vishal.maurya@enterprisehrms.com",
+        "password": "Vishal@123"
     }).json()["access_token"]
     elena_headers = {"Authorization": f"Bearer {elena_token}"}
 
@@ -226,8 +226,8 @@ def test_recruitment_pipeline_and_hire_onboard_conversion(client):
     # 3. Trigger 1-Click Hire & Onboard Handover (Connected Workflow)
     # HR Manager executes the conversion
     sarah_token = client.post("/api/auth/login", json={
-        "email": "sarah.jenkins@enterprisehrms.com",
-        "password": "Enterprise@2026"
+        "email": "vishu.soam@enterprisehrms.com",
+        "password": "Vishu@123"
     }).json()["access_token"]
     sarah_headers = {"Authorization": f"Bearer {sarah_token}"}
 
@@ -244,8 +244,8 @@ def test_recruitment_pipeline_and_hire_onboard_conversion(client):
 
 def test_performance_and_goals_flow(client):
     alex_token = client.post("/api/auth/login", json={
-        "email": "alex.chen@enterprisehrms.com",
-        "password": "Enterprise@2026"
+        "email": "aman@enterprisehrms.com",
+        "password": "Aman@123"
     }).json()["access_token"]
     alex_headers = {"Authorization": f"Bearer {alex_token}"}
 
@@ -272,8 +272,8 @@ def test_performance_and_goals_flow(client):
 
     # 4. Give Peer Recognition
     marcus_token = client.post("/api/auth/login", json={
-        "email": "marcus.vance@enterprisehrms.com",
-        "password": "Enterprise@2026"
+        "email": "yash.sharma@enterprisehrms.com",
+        "password": "Yash@123"
     }).json()["access_token"]
     marcus_headers = {"Authorization": f"Bearer {marcus_token}"}
 
@@ -287,8 +287,8 @@ def test_performance_and_goals_flow(client):
 
 def test_expenses_and_helpdesk_flow(client):
     alex_token = client.post("/api/auth/login", json={
-        "email": "alex.chen@enterprisehrms.com",
-        "password": "Enterprise@2026"
+        "email": "aman@enterprisehrms.com",
+        "password": "Aman@123"
     }).json()["access_token"]
     alex_headers = {"Authorization": f"Bearer {alex_token}"}
 
@@ -305,8 +305,8 @@ def test_expenses_and_helpdesk_flow(client):
 
     # 2. Manager approves expense
     marcus_token = client.post("/api/auth/login", json={
-        "email": "marcus.vance@enterprisehrms.com",
-        "password": "Enterprise@2026"
+        "email": "yash.sharma@enterprisehrms.com",
+        "password": "Yash@123"
     }).json()["access_token"]
     marcus_headers = {"Authorization": f"Bearer {marcus_token}"}
 
@@ -330,7 +330,7 @@ def test_expenses_and_helpdesk_flow(client):
     # 4. IT Admin resolves helpdesk ticket
     it_token = client.post("/api/auth/login", json={
         "email": "rachel.green@enterprisehrms.com",
-        "password": "Enterprise@2026"
+        "password": "Rachel@123"
     }).json()["access_token"]
     it_headers = {"Authorization": f"Bearer {it_token}"}
 
@@ -344,7 +344,7 @@ def test_expenses_and_helpdesk_flow(client):
 def test_reports_and_csv_export(client):
     admin_token = client.post("/api/auth/login", json={
         "email": "admin@enterprisehrms.com",
-        "password": "Enterprise@2026"
+        "password": "Vishal@123"
     }).json()["access_token"]
     admin_headers = {"Authorization": f"Bearer {admin_token}"}
 
@@ -370,8 +370,8 @@ def test_reports_and_csv_export(client):
 def test_role_based_access_controls_enforced(client):
     # Employee persona (Alex Chen) attempting restricted actions
     alex_token = client.post("/api/auth/login", json={
-        "email": "alex.chen@enterprisehrms.com",
-        "password": "Enterprise@2026"
+        "email": "aman@enterprisehrms.com",
+        "password": "Aman@123"
     }).json()["access_token"]
     alex_headers = {"Authorization": f"Bearer {alex_token}"}
 
@@ -384,8 +384,8 @@ def test_role_based_access_controls_enforced(client):
 
     # Recruiter persona (Elena Rostova) cannot access payroll structures
     elena_token = client.post("/api/auth/login", json={
-        "email": "elena.rostova@enterprisehrms.com",
-        "password": "Enterprise@2026"
+        "email": "vishal.maurya@enterprisehrms.com",
+        "password": "Vishal@123"
     }).json()["access_token"]
     elena_headers = {"Authorization": f"Bearer {elena_token}"}
 

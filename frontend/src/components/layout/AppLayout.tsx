@@ -170,29 +170,39 @@ export const AppLayout: React.FC = () => {
           </form>
         </div>
 
-        {/* Right Tools & Role Switcher */}
+        {/* Right Tools & Role Display */}
         <div className="flex items-center gap-2">
-          {/* Quick Role / Persona Switcher (For seamless testing across 7 enterprise roles) */}
+          {/* Role Display & Administrator Simulation Tool */}
           <div className="relative">
-            <button
-              onClick={() => setPersonaMenuOpen(!personaMenuOpen)}
-              className="flex items-center gap-2 px-2.5 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 text-xs font-medium text-slate-700 dark:text-slate-200 transition"
-              title="Switch enterprise portal persona"
-            >
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-              <span className="font-semibold text-slate-900 dark:text-white hidden lg:inline">Role:</span>
-              <span className="max-w-[120px] truncate">{user?.role || 'Guest'}</span>
-              <ChevronDown className="w-3.5 h-3.5 text-slate-400" />
-            </button>
+            {user?.role === 'Super Admin' ? (
+              <button
+                onClick={() => setPersonaMenuOpen(!personaMenuOpen)}
+                className="flex items-center gap-2 px-2.5 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 text-xs font-medium text-slate-700 dark:text-slate-200 transition"
+                title="Simulate role portal (Administrator Only)"
+              >
+                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span className="font-semibold text-slate-900 dark:text-white hidden lg:inline">Role:</span>
+                <span className="max-w-[120px] truncate">{user?.role}</span>
+                <ChevronDown className="w-3.5 h-3.5 text-slate-400" />
+              </button>
+            ) : (
+              <div
+                className="flex items-center gap-2 px-2.5 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-xs font-medium text-slate-700 dark:text-slate-200"
+              >
+                <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
+                <span className="font-semibold text-slate-900 dark:text-white hidden lg:inline">Role:</span>
+                <span className="max-w-[120px] truncate">{user?.role || 'Guest'}</span>
+              </div>
+            )}
 
-            {personaMenuOpen && (
+            {personaMenuOpen && user?.role === 'Super Admin' && (
               <div className="absolute right-0 mt-2 w-80 bg-white dark:bg-slate-900 rounded-xl shadow-xl border border-slate-200 dark:border-slate-800 py-2 z-50">
                 <div className="px-3 py-2 border-b border-slate-100 dark:border-slate-800">
                   <div className="text-xs font-semibold uppercase tracking-wider text-slate-400">
-                    Switch Role Portal (Demo Evaluation)
+                    Administrator Role Simulation
                   </div>
                   <div className="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">
-                    Select any of the 7 enterprise personas to test role-specific dashboard & access controls:
+                    Authorized Super Admin testing tool for verifying role-specific UI & permissions:
                   </div>
                 </div>
                 <div className="max-h-72 overflow-y-auto py-1">

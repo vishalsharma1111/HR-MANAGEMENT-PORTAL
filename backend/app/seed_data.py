@@ -477,8 +477,6 @@ def seed_database(db: Session = None):
 
         print("Seeding enterprise database with realistic personas and data...")
 
-        default_pw = get_password_hash("Enterprise@2026")
-
         # 1. Departments
         depts_data = [
             ("Executive Leadership", "EXEC", "Executive management and corporate governance."),
@@ -532,7 +530,8 @@ def seed_database(db: Session = None):
         personas = [
             {
                 "email": "admin@enterprisehrms.com",
-                "name": "Arthur Pendelton",
+                "name": "Vishal Sharma",
+                "password": "Vishal@123",
                 "role": RoleEnum.SUPER_ADMIN.value,
                 "dept": "EXEC",
                 "desig": "CEO",
@@ -541,8 +540,9 @@ def seed_database(db: Session = None):
                 "status": "Active"
             },
             {
-                "email": "sarah.jenkins@enterprisehrms.com",
-                "name": "Sarah Jenkins",
+                "email": "vishu.soam@enterprisehrms.com",
+                "name": "Vishu Soam",
+                "password": "Vishu@123",
                 "role": RoleEnum.HR_MANAGER.value,
                 "dept": "HR",
                 "desig": "HRM",
@@ -551,8 +551,9 @@ def seed_database(db: Session = None):
                 "status": "Active"
             },
             {
-                "email": "marcus.vance@enterprisehrms.com",
-                "name": "Marcus Vance",
+                "email": "yash.sharma@enterprisehrms.com",
+                "name": "Yash Sharma",
+                "password": "Yash@123",
                 "role": RoleEnum.DEPT_MANAGER.value,
                 "dept": "ENG",
                 "desig": "ENGDIR",
@@ -561,8 +562,9 @@ def seed_database(db: Session = None):
                 "status": "Active"
             },
             {
-                "email": "alex.chen@enterprisehrms.com",
-                "name": "Alex Chen",
+                "email": "aman@enterprisehrms.com",
+                "name": "Aman",
+                "password": "Aman@123",
                 "role": RoleEnum.EMPLOYEE.value,
                 "dept": "ENG",
                 "desig": "SRSWE",
@@ -571,8 +573,9 @@ def seed_database(db: Session = None):
                 "status": "Active"
             },
             {
-                "email": "elena.rostova@enterprisehrms.com",
-                "name": "Elena Rostova",
+                "email": "vishal.maurya@enterprisehrms.com",
+                "name": "Vishal Maurya",
+                "password": "Vishal@123",
                 "role": RoleEnum.RECRUITER.value,
                 "dept": "HR",
                 "desig": "REC",
@@ -581,8 +584,9 @@ def seed_database(db: Session = None):
                 "status": "Active"
             },
             {
-                "email": "david.miller@enterprisehrms.com",
-                "name": "David Miller",
+                "email": "vishal.bhardwaj@enterprisehrms.com",
+                "name": "Vishal Bhardwaj",
+                "password": "Vishal@123",
                 "role": RoleEnum.PAYROLL_OFFICER.value,
                 "dept": "FIN",
                 "desig": "PAYSPEC",
@@ -593,6 +597,7 @@ def seed_database(db: Session = None):
             {
                 "email": "rachel.green@enterprisehrms.com",
                 "name": "Rachel Green",
+                "password": "Rachel@123",
                 "role": RoleEnum.IT_ADMIN.value,
                 "dept": "IT",
                 "desig": "SYSADMIN",
@@ -602,8 +607,9 @@ def seed_database(db: Session = None):
             },
             # Additional team members
             {
-                "email": "jessica.taylor@enterprisehrms.com",
-                "name": "Jessica Taylor",
+                "email": "vishnu@enterprisehrms.com",
+                "name": "Vishnu",
+                "password": "Vishnu@123",
                 "role": RoleEnum.EMPLOYEE.value,
                 "dept": "ENG",
                 "desig": "SWE2",
@@ -612,8 +618,9 @@ def seed_database(db: Session = None):
                 "status": "Probation"
             },
             {
-                "email": "samuel.oak@enterprisehrms.com",
-                "name": "Samuel Oak",
+                "email": "yash.bhardwaj@enterprisehrms.com",
+                "name": "Yash Bhardwaj",
+                "password": "Yash@123",
                 "role": RoleEnum.EMPLOYEE.value,
                 "dept": "PROD",
                 "desig": "PRINPM",
@@ -622,8 +629,9 @@ def seed_database(db: Session = None):
                 "status": "Active"
             },
             {
-                "email": "olivia.bennett@enterprisehrms.com",
-                "name": "Olivia Bennett",
+                "email": "rohini@enterprisehrms.com",
+                "name": "Rohini",
+                "password": "Rohini@123",
                 "role": RoleEnum.EMPLOYEE.value,
                 "dept": "ENG",
                 "desig": "SWE2",
@@ -636,12 +644,12 @@ def seed_database(db: Session = None):
         emp_objs = {}
         for p in personas:
             first, *rest = p["name"].split(" ")
-            last = " ".join(rest) if rest else "Staff"
+            last = " ".join(rest) if rest else ""
 
             # Create User
             user = User(
                 email=p["email"],
-                hashed_password=default_pw,
+                hashed_password=get_password_hash(p["password"]),
                 full_name=p["name"],
                 role=p["role"],
                 is_active=True,

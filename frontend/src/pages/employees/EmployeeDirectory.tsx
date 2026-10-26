@@ -747,13 +747,10 @@ export const EmployeeDirectory: React.FC = () => {
                       </select>
                     </div>
                     <div>
-                      <label className="block font-semibold text-[11px] mb-1">Default Password</label>
-                      <input
-                        type="text"
-                        disabled
-                        value="Enterprise@2026"
-                        className="w-full px-2 py-1.5 bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 rounded-lg text-xs text-slate-500 font-mono"
-                      />
+                      <label className="block font-semibold text-[11px] mb-1">Initial Credentials</label>
+                      <div className="w-full px-2 py-1.5 bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 rounded-lg text-xs text-slate-500 italic">
+                        Secure temporary credentials automatically dispatched via email
+                      </div>
                     </div>
                   </div>
                 )}

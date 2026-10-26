@@ -1,7 +1,13 @@
+CREDENTIALS_MAP = {
+    "admin@enterprisehrms.com": "Vishal@123",
+    "rachel.green@enterprisehrms.com": "Rachel@123",
+}
+
 def get_auth_token(client, email):
+    password = CREDENTIALS_MAP.get(email, "Vishal@123")
     login_resp = client.post("/api/auth/login", json={
         "email": email,
-        "password": "Enterprise@2026"
+        "password": password
     })
     return login_resp.json()["access_token"]
 

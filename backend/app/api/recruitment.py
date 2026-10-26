@@ -1,3 +1,4 @@
+import secrets
 from datetime import datetime, date
 from typing import List, Optional
 from fastapi import APIRouter, Depends, HTTPException, Query, status
@@ -266,10 +267,11 @@ def hire_and_onboard_candidate(
     first, *rest = candidate.full_name.split(" ")
     last = " ".join(rest) if rest else "Staff"
 
-    # Provision user account
+    # Provision user account with cryptographically random temporary credentials
+    temp_password = secrets.token_urlsafe(12)
     user = User(
         email=candidate.email,
-        hashed_password=get_password_hash("Enterprise@2026"),
+        hashed_password=get_password_hash(temp_password),
         full_name=candidate.full_name,
         role=RoleEnum.EMPLOYEE.value,
         is_active=True,

@@ -25,12 +25,17 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const [personas, setPersonas] = useState<Persona[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
-  const fetchPersonas = async () => {
+  const fetchPersonas = async (targetUser?: User | null) => {
+    const active = targetUser ?? user;
+    if (active?.role !== 'Super Admin') {
+      setPersonas([]);
+      return;
+    }
     try {
       const data = await api.getPersonas();
       setPersonas(data);
     } catch {
-      // Non-blocking in case backend is starting
+      setPersonas([]);
     }
   };
 
@@ -43,6 +48,9 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       const currentUser = await api.getCurrentUser();
       setUser(currentUser);
       localStorage.setItem('user', JSON.stringify(currentUser));
+      if (currentUser?.role === 'Super Admin') {
+        fetchPersonas(currentUser);
+      }
     } catch {
       logout();
     } finally {
@@ -52,7 +60,6 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   useEffect(() => {
     refreshUser();
-    fetchPersonas();
 
     const handleUnauthorized = () => {
       logout();
@@ -70,7 +77,11 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       localStorage.setItem('user', JSON.stringify(data.user));
       setToken(data.access_token);
       setUser(data.user);
-      fetchPersonas();
+      if (data.user?.role === 'Super Admin') {
+        fetchPersonas(data.user);
+      } else {
+        setPersonas([]);
+      }
     } finally {
       setIsLoading(false);
     }
@@ -81,6 +92,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     localStorage.removeItem('user');
     setToken(null);
     setUser(null);
+    setPersonas([]);
   };
 
   const switchPersona = async (userId: number) => {

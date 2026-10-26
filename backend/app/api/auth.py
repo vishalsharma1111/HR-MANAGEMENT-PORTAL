@@ -266,9 +266,13 @@ def toggle_user_status(
     return {"message": f"User status updated to {'Active' if is_active else 'Deactivated'}"}
 
 @router.get("/personas")
-def get_available_personas(db: Session = Depends(get_db)):
+def get_available_personas(
+    current_user: User = Depends(require_roles([RoleEnum.SUPER_ADMIN])),
+    db: Session = Depends(get_db)
+):
     """
-    Returns available role personas for easy demonstration and inspection.
+    Returns available role personas for authorized administrators to test roles.
+    Strictly protected: inaccessible to unauthenticated users or non-administrators.
     """
     users = db.query(User).filter(User.is_active == True).all()
     personas = []
@@ -284,9 +288,14 @@ def get_available_personas(db: Session = Depends(get_db)):
     return personas
 
 @router.post("/switch-persona/{user_id}", response_model=Token)
-def switch_persona(user_id: int, db: Session = Depends(get_db)):
+def switch_persona(
+    user_id: int, 
+    current_user: User = Depends(require_roles([RoleEnum.SUPER_ADMIN])),
+    db: Session = Depends(get_db)
+):
     """
-    Enables quick role switching in development/demo mode to verify all 7 role-based portals.
+    Enables administrator-only role simulation to inspect role-specific portals.
+    Strictly protected: requires authenticated Super Admin session.
     """
     target = db.query(User).filter(User.id == user_id).first()
     if not target:

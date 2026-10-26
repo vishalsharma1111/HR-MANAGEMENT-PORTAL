@@ -23,7 +23,7 @@ from app.auth.dependencies import (
 router = APIRouter(prefix="/payroll", tags=["Payroll & Compensation"])
 
 def format_payslip_response(p: Payslip) -> PayslipResponse:
-    emp_name = f"{p.employee.first_name} {p.employee.last_name}" if p.employee else "Unknown"
+    emp_name = f"{p.employee.first_name} {p.employee.last_name}".strip() if p.employee else "Unknown"
     emp_code = p.employee.employee_id if p.employee else "N/A"
     dept_name = p.employee.department.name if p.employee and p.employee.department else "General"
     desig_name = p.employee.designation.title if p.employee and p.employee.designation else "Staff"
@@ -67,7 +67,7 @@ def list_salary_structures(
     structures = db.query(SalaryStructure).all()
     results = []
     for s in structures:
-        emp_name = f"{s.employee.first_name} {s.employee.last_name}" if s.employee else "Unknown"
+        emp_name = f"{s.employee.first_name} {s.employee.last_name}".strip() if s.employee else "Unknown"
         results.append(SalaryStructureResponse(
             id=s.id,
             employee_id=s.employee_id,
@@ -136,7 +136,7 @@ def set_salary_structure(
         details=f"Configured compensation for employee #{data.employee_id}: Net ${net_monthly}/mo (Gross ${gross_monthly})"
     )
 
-    emp_name = f"{structure.employee.first_name} {structure.employee.last_name}" if structure.employee else "Unknown"
+    emp_name = f"{structure.employee.first_name} {structure.employee.last_name}".strip() if structure.employee else "Unknown"
     return SalaryStructureResponse(
         id=structure.id,
         employee_id=structure.employee_id,

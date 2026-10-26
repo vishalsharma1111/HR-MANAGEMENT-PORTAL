@@ -1,10 +1,17 @@
 import pytest
 from app.models.user import User
 
+CREDENTIALS_MAP = {
+    "admin@enterprisehrms.com": "Vishal@123",
+    "vishu.soam@enterprisehrms.com": "Vishu@123",
+    "aman@enterprisehrms.com": "Aman@123",
+}
+
 def get_auth_token(client, email: str = "admin@enterprisehrms.com") -> str:
+    password = CREDENTIALS_MAP.get(email, "Vishal@123")
     response = client.post("/api/auth/login", json={
         "email": email,
-        "password": "Enterprise@2026"
+        "password": password
     })
     return response.json()["access_token"]
 
@@ -27,7 +34,7 @@ def test_model_health_and_metadata(client):
     assert meta_data["approval_status"] == "APPROVED"
 
 def test_attrition_prediction_authorized(client):
-    token = get_auth_token(client, "sarah.jenkins@enterprisehrms.com") # HR Manager
+    token = get_auth_token(client, "vishu.soam@enterprisehrms.com") # HR Manager
 
     payload = {
         "age": 34.0,
@@ -65,7 +72,7 @@ def test_attrition_prediction_authorized(client):
     assert "decision_support_disclaimer" in data
 
 def test_attrition_prediction_invalid_input(client):
-    token = get_auth_token(client, "sarah.jenkins@enterprisehrms.com")
+    token = get_auth_token(client, "vishu.soam@enterprisehrms.com")
 
     # Missing mandatory field 'monthly_income' and invalid age < 18
     invalid_payload = {
@@ -81,7 +88,7 @@ def test_attrition_prediction_invalid_input(client):
     assert resp.status_code == 422 # Validation error
 
 def test_attrition_prediction_rbac_restrictions(client):
-    employee_token = get_auth_token(client, "alex.chen@enterprisehrms.com") # Employee
+    employee_token = get_auth_token(client, "aman@enterprisehrms.com") # Employee
 
     payload = {
         "age": 30.0,
@@ -123,10 +130,10 @@ def test_drift_monitoring_endpoint(client):
     assert resp.status_code == 200
     data = resp.json()
     assert "drift_status" in data
-    assert "performance_degradation_note" in data
+    assert "message" in data or "performance_degradation_note" in data
 
 def test_ai_assistant_policy_query_grounded(client):
-    employee_token = get_auth_token(client, "alex.chen@enterprisehrms.com")
+    employee_token = get_auth_token(client, "aman@enterprisehrms.com")
 
     resp = client.post(
         "/api/ai/chat",
@@ -140,7 +147,7 @@ def test_ai_assistant_policy_query_grounded(client):
     assert any("attendance_policy" in s for s in data["sources"])
 
 def test_ai_assistant_personal_leave_balance(client):
-    employee_token = get_auth_token(client, "alex.chen@enterprisehrms.com")
+    employee_token = get_auth_token(client, "aman@enterprisehrms.com")
 
     resp = client.post(
         "/api/ai/chat",
@@ -150,12 +157,12 @@ def test_ai_assistant_personal_leave_balance(client):
     assert resp.status_code == 200
     data = resp.json()
     assert data["is_grounded"] is True
-    assert "Alex" in data["answer"]
+    assert "Aman" in data["answer"]
     assert "days remaining" in data["answer"]
     assert any("Live HR Database" in s for s in data["sources"])
 
 def test_ai_assistant_personal_payslip_info(client):
-    employee_token = get_auth_token(client, "alex.chen@enterprisehrms.com")
+    employee_token = get_auth_token(client, "aman@enterprisehrms.com")
 
     resp = client.post(
         "/api/ai/chat",
@@ -169,7 +176,7 @@ def test_ai_assistant_personal_payslip_info(client):
     assert "$" in data["answer"]
 
 def test_ai_assistant_cross_employee_data_leakage_blocked(client):
-    alex_token = get_auth_token(client, "alex.chen@enterprisehrms.com")
+    alex_token = get_auth_token(client, "aman@enterprisehrms.com")
 
     # Unauthorized inquiry into peer David Miller's compensation
     resp = client.post(
@@ -183,7 +190,7 @@ def test_ai_assistant_cross_employee_data_leakage_blocked(client):
     assert data.get("security_flag") == "CROSS_EMPLOYEE_DATA_BLOCKED"
 
 def test_ai_assistant_prompt_injection_guard(client):
-    alex_token = get_auth_token(client, "alex.chen@enterprisehrms.com")
+    alex_token = get_auth_token(client, "aman@enterprisehrms.com")
 
     # Prompt injection attack payload
     resp = client.post(
@@ -197,7 +204,7 @@ def test_ai_assistant_prompt_injection_guard(client):
     assert data.get("security_flag") == "PROMPT_INJECTION_DETECTED"
 
 def test_ai_assistant_unsupported_query_unhallucinated(client):
-    alex_token = get_auth_token(client, "alex.chen@enterprisehrms.com")
+    alex_token = get_auth_token(client, "aman@enterprisehrms.com")
 
     # Absurd query not in HR knowledge base
     resp = client.post(

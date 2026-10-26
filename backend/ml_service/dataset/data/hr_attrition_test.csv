@@ -1,0 +1,296 @@
+age,department,job_role,monthly_income,distance_from_home,education_level,environment_satisfaction,job_satisfaction,work_life_balance,performance_rating,overtime,total_working_years,years_at_company,years_in_current_role,years_since_last_promotion,years_with_curr_manager,num_companies_worked,stock_option_level,training_times_last_year,attrition
+52,Finance & Payroll,Payroll Specialist,12043.65,26,3,4,4,4,3,No,26,8,5,4,5,7,2,0,0
+25,Sales & Marketing,Account Executive,6389.92,16,2,1,3,2,3,No,1,0,0,0,0,0,1,6,1
+50,Human Resources,VP of HR,18239.75,1,3,4,1,2,3,No,1,1,0,0,0,0,0,1,0
+32,Finance & Payroll,Financial Analyst,7086.1,21,5,3,4,3,3,Yes,4,3,1,0,0,2,1,6,0
+26,Finance & Payroll,Financial Analyst,6129.96,13,3,4,2,3,3,No,5,0,0,0,0,3,1,2,0
+49,Human Resources,HR Manager,11601.98,29,1,2,1,1,3,No,6,2,2,1,0,3,0,3,1
+47,Product Management,Director of Product,17206.97,1,3,2,4,4,4,Yes,5,2,0,0,0,3,1,5,0
+34,Product Management,UX Designer,4882.82,2,4,4,4,3,3,No,1,0,0,0,0,1,0,6,0
+52,Finance & Payroll,Finance Director,22537.15,12,2,4,3,3,3,No,21,4,2,2,0,8,0,2,0
+49,Product Management,UX Designer,9672.47,19,2,3,2,3,3,Yes,20,8,0,0,0,5,0,3,0
+53,Human Resources,HR Manager,18234.66,35,4,4,2,1,3,No,24,18,9,4,0,0,1,2,0
+40,Finance & Payroll,Payroll Specialist,8334.48,33,3,3,3,3,3,No,15,11,3,0,3,6,0,3,0
+60,Sales & Marketing,Marketing Lead,12107.33,24,3,3,1,3,3,Yes,7,6,1,1,1,2,1,2,0
+28,Product Management,Product Manager,13802.63,10,3,3,3,4,3,No,7,4,2,0,1,3,0,1,0
+50,Finance & Payroll,Finance Director,22201.66,20,3,3,3,1,3,No,26,8,6,3,0,8,1,0,0
+48,Finance & Payroll,Payroll Specialist,11021.7,27,3,4,4,3,3,Yes,19,19,2,0,1,5,0,4,0
+52,Finance & Payroll,Finance Director,19322.71,18,3,4,4,4,3,No,8,1,1,1,0,5,1,4,0
+27,Product Management,Product Manager,13842.65,23,3,4,2,3,3,Yes,6,6,1,0,0,2,1,3,0
+26,Sales & Marketing,Marketing Lead,10184.45,29,4,4,3,4,3,No,1,1,0,0,0,1,0,5,0
+48,Product Management,UX Designer,11831.55,5,3,2,3,4,3,No,27,18,1,0,1,2,1,1,0
+22,Sales & Marketing,Sales Representative,4540.17,24,3,3,4,3,3,Yes,1,1,0,0,0,0,0,0,0
+30,Software Engineering,Software Engineer,4567.06,28,3,2,1,1,3,No,2,2,2,1,1,2,0,5,0
+54,Finance & Payroll,Financial Analyst,10248.99,32,1,2,3,4,3,No,15,3,1,0,0,1,0,3,0
+32,Sales & Marketing,Account Executive,5093.34,16,1,4,3,2,3,No,1,0,0,0,0,1,1,5,0
+39,Product Management,Director of Product,20603.51,16,4,2,4,3,3,Yes,17,0,0,0,0,6,1,5,0
+60,Product Management,Product Manager,14506.39,9,3,1,4,3,3,Yes,9,8,4,2,2,2,1,6,0
+53,Human Resources,VP of HR,20806.99,15,1,3,4,2,4,Yes,8,8,3,3,2,2,1,5,0
+52,Software Engineering,Software Engineer,7114.65,1,4,4,4,2,4,Yes,4,2,0,0,0,2,0,1,0
+24,Sales & Marketing,Sales Representative,4997.03,25,3,2,2,3,3,No,1,1,0,0,0,0,0,5,0
+44,Product Management,Director of Product,17795.54,9,2,3,1,3,4,No,8,2,1,1,1,4,0,4,0
+28,Human Resources,HR Specialist,5736.01,17,2,1,1,3,3,No,5,2,1,1,0,2,1,6,1
+42,Product Management,Product Manager,15468.25,29,2,2,4,3,4,Yes,12,9,6,3,2,5,1,4,0
+33,Software Engineering,Engineering Director,18520.45,3,2,2,3,2,3,No,6,3,2,0,1,0,0,2,0
+54,Human Resources,Recruiter,13901.53,6,5,3,1,4,3,No,32,8,8,7,4,2,1,2,0
+60,Sales & Marketing,Marketing Lead,17024.08,12,4,2,3,2,3,No,34,11,6,0,0,2,1,0,0
+42,Finance & Payroll,Payroll Specialist,4774.33,10,5,3,3,1,4,No,3,1,0,0,0,0,1,6,0
+28,Human Resources,HR Manager,10719.84,8,4,3,2,4,3,No,1,1,1,0,0,1,1,5,0
+34,Sales & Marketing,Sales Representative,8127.71,27,1,1,3,3,3,No,7,1,0,0,0,3,1,3,0
+44,Sales & Marketing,Account Executive,7973.61,2,3,3,3,1,3,Yes,15,8,6,5,3,5,1,1,1
+30,Human Resources,HR Specialist,6863.52,3,4,2,4,3,3,No,9,5,1,1,0,4,1,2,0
+35,Human Resources,HR Manager,14130.0,14,3,4,4,3,3,No,7,5,3,3,3,4,0,6,0
+35,Sales & Marketing,Marketing Lead,11569.61,28,3,3,2,2,3,No,6,6,0,0,0,4,0,0,0
+58,Sales & Marketing,Account Executive,10480.87,12,2,2,2,2,4,No,23,10,1,1,0,3,3,2,0
+25,Human Resources,Recruiter,6910.91,5,5,1,3,3,4,Yes,2,2,0,0,0,2,2,3,0
+23,Product Management,Director of Product,16659.1,7,3,1,1,1,3,No,1,1,1,0,0,0,1,0,1
+53,Human Resources,HR Specialist,12978.65,21,3,3,2,2,3,No,28,19,2,2,1,3,1,6,0
+29,Finance & Payroll,Payroll Specialist,6359.9,17,3,3,1,3,3,No,2,2,2,2,2,2,0,5,0
+30,Finance & Payroll,Payroll Specialist,7283.97,6,3,2,2,3,3,No,9,4,3,0,0,0,1,5,0
+36,Finance & Payroll,Finance Director,17975.79,7,2,3,1,3,4,No,10,0,0,0,0,4,1,3,0
+43,Sales & Marketing,Sales Representative,10153.57,9,4,2,3,2,3,Yes,21,7,7,0,1,6,0,1,0
+40,Product Management,UX Designer,6214.44,7,3,3,1,3,3,Yes,8,7,7,6,6,5,1,1,1
+38,Software Engineering,Software Engineer,6842.61,18,2,3,3,4,3,Yes,5,2,1,0,0,2,0,5,0
+57,Human Resources,HR Specialist,9768.26,4,4,3,3,4,3,Yes,18,4,4,4,0,1,2,0,0
+45,Product Management,Director of Product,17694.33,6,3,4,3,3,3,Yes,1,1,0,0,0,0,2,0,0
+45,Sales & Marketing,Sales Representative,9859.64,4,4,4,2,3,3,No,23,9,7,3,6,0,1,0,0
+46,Product Management,UX Designer,6853.28,7,3,4,2,2,3,No,4,1,0,0,0,1,1,3,0
+49,Software Engineering,Engineering Director,20804.19,19,2,4,1,3,3,No,19,5,5,5,3,7,2,3,0
+55,Software Engineering,Senior Software Engineer,15306.66,8,4,3,3,4,3,Yes,33,10,6,6,4,5,1,6,0
+45,Sales & Marketing,Account Executive,6298.87,30,3,2,3,3,3,No,3,3,0,0,0,2,0,0,0
+46,Software Engineering,Tech Lead,11028.79,23,3,3,3,3,3,Yes,8,8,6,2,6,0,1,2,1
+44,Finance & Payroll,Finance Director,21943.75,21,2,2,3,3,3,No,18,10,10,5,8,5,0,0,0
+46,Sales & Marketing,Marketing Lead,16097.56,9,4,3,2,4,3,No,25,17,7,1,1,2,0,1,0
+57,Finance & Payroll,Payroll Specialist,6215.91,11,2,3,4,4,3,Yes,4,0,0,0,0,1,0,1,0
+51,Human Resources,Recruiter,10015.68,2,3,3,4,1,3,No,24,19,1,1,1,5,2,1,0
+53,Finance & Payroll,Payroll Specialist,9039.82,7,2,1,1,3,4,Yes,16,6,3,0,1,5,3,4,0
+34,Human Resources,VP of HR,20146.51,13,4,3,4,3,4,No,11,2,0,0,0,2,0,3,0
+50,Sales & Marketing,Account Executive,7010.74,5,3,3,3,4,3,No,4,2,2,1,2,1,0,2,0
+32,Human Resources,HR Manager,11970.35,4,3,1,4,3,3,Yes,2,0,0,0,0,2,1,2,0
+55,Sales & Marketing,Account Executive,7379.99,27,4,1,3,3,3,No,11,5,2,1,1,4,1,2,0
+27,Sales & Marketing,Sales Representative,5320.21,23,3,2,3,2,3,No,5,4,3,3,3,0,1,6,0
+54,Software Engineering,Senior Software Engineer,16049.32,7,2,2,2,2,3,Yes,31,11,9,2,7,5,0,0,0
+41,Finance & Payroll,Financial Analyst,9789.1,13,1,1,3,3,4,No,15,10,5,4,0,7,0,6,0
+53,Software Engineering,Software Engineer,14083.31,32,5,2,2,1,3,No,32,15,3,1,0,0,0,2,0
+24,Finance & Payroll,Payroll Specialist,6295.74,11,2,3,1,3,3,No,1,0,0,0,0,1,1,1,0
+52,Software Engineering,Software Engineer,5697.46,14,3,4,2,3,3,No,3,3,0,0,0,1,0,0,1
+31,Human Resources,HR Manager,12858.63,6,3,2,4,3,3,No,8,8,6,2,3,5,0,0,0
+57,Sales & Marketing,Sales Representative,8599.48,5,3,3,3,2,3,Yes,18,14,7,5,4,8,1,5,0
+48,Sales & Marketing,Account Executive,10563.0,33,2,3,4,3,3,No,22,7,0,0,0,6,0,3,0
+33,Sales & Marketing,Sales Representative,7274.27,12,3,3,1,3,3,Yes,7,4,0,0,0,0,1,1,0
+55,Software Engineering,Engineering Director,20897.64,2,4,2,1,4,4,Yes,16,0,0,0,0,1,1,6,0
+32,Product Management,Director of Product,19417.4,22,4,4,3,1,3,No,10,9,2,0,2,4,0,1,0
+38,Software Engineering,Tech Lead,11140.56,6,1,2,1,3,3,No,8,7,3,2,3,5,1,4,1
+27,Human Resources,HR Manager,12094.96,3,5,2,3,3,3,No,4,2,2,0,0,3,0,5,0
+25,Product Management,UX Designer,5145.42,32,2,4,4,3,3,No,1,1,0,0,0,0,0,3,0
+23,Product Management,UX Designer,6805.92,1,3,2,3,3,4,Yes,2,2,0,0,0,2,0,5,0
+49,Sales & Marketing,Sales Representative,8347.58,5,2,3,1,3,3,No,13,11,9,2,6,7,2,3,0
+60,Human Resources,HR Specialist,8168.6,11,3,3,1,2,4,No,12,8,4,3,3,3,1,5,0
+44,Sales & Marketing,Sales Representative,11125.31,3,2,2,3,1,3,No,23,6,0,0,0,4,0,3,0
+41,Human Resources,VP of HR,19103.87,2,4,1,2,2,3,No,3,0,0,0,0,0,1,0,0
+41,Sales & Marketing,Marketing Lead,11429.63,35,3,1,2,1,3,No,2,2,0,0,0,1,2,2,0
+41,Finance & Payroll,Financial Analyst,7023.41,31,1,3,3,1,3,No,11,7,3,3,2,0,2,5,0
+47,Product Management,UX Designer,10190.57,2,3,2,3,2,3,No,22,20,6,4,1,8,1,0,0
+40,Finance & Payroll,Financial Analyst,11134.39,31,1,2,4,2,3,No,19,14,10,3,4,6,1,6,0
+32,Finance & Payroll,Payroll Specialist,7168.73,6,2,3,3,3,3,No,5,1,1,0,1,1,1,6,0
+25,Product Management,Product Manager,11548.33,5,2,4,3,3,3,No,3,0,0,0,0,2,1,1,0
+28,Human Resources,VP of HR,20310.82,12,2,4,1,3,3,No,4,4,3,0,0,1,2,4,0
+23,Product Management,UX Designer,4896.65,4,4,2,4,3,4,No,1,0,0,0,0,0,0,5,0
+40,Software Engineering,Engineering Director,16355.9,14,3,3,4,2,3,No,1,0,0,0,0,1,1,1,1
+48,Product Management,Product Manager,17430.01,12,1,2,2,2,3,No,22,0,0,0,0,8,2,4,0
+32,Sales & Marketing,Sales Representative,8217.12,4,3,4,3,2,3,No,9,1,1,0,0,3,1,0,0
+45,Human Resources,Recruiter,10463.92,16,1,3,3,2,3,No,21,1,1,0,1,1,2,0,0
+32,Finance & Payroll,Finance Director,18767.19,9,3,4,2,3,4,No,9,8,8,5,7,3,0,4,0
+59,Sales & Marketing,Sales Representative,6587.74,17,2,1,4,4,4,No,8,0,0,0,0,5,1,6,0
+40,Sales & Marketing,Sales Representative,10443.81,25,3,1,4,2,4,No,18,15,3,3,1,2,2,6,0
+32,Sales & Marketing,Account Executive,8374.01,28,3,4,3,3,3,No,8,6,1,0,0,3,1,0,0
+33,Product Management,Product Manager,13091.84,27,2,3,4,2,3,Yes,8,2,0,0,0,5,2,5,0
+31,Sales & Marketing,Sales Representative,7968.33,24,2,4,1,3,3,Yes,6,3,0,0,0,4,2,3,0
+52,Finance & Payroll,Financial Analyst,11663.15,35,4,1,3,2,3,No,30,7,2,0,2,4,1,0,0
+38,Software Engineering,Software Engineer,6884.48,32,2,4,2,4,3,Yes,11,11,4,3,0,2,0,3,0
+48,Human Resources,VP of HR,19245.61,2,4,3,2,3,3,Yes,5,3,2,2,2,0,0,5,0
+36,Product Management,Director of Product,17617.13,15,1,1,2,3,3,Yes,10,2,1,1,0,0,0,1,1
+42,Sales & Marketing,Marketing Lead,14215.85,26,2,1,3,3,3,No,16,8,7,2,4,8,0,6,0
+33,Finance & Payroll,Finance Director,18222.09,15,4,2,3,3,3,No,9,2,1,1,1,1,1,3,0
+57,Finance & Payroll,Financial Analyst,10150.05,24,3,3,4,3,3,Yes,15,7,5,5,5,4,2,2,0
+60,Human Resources,Recruiter,10106.96,15,2,4,1,2,3,No,17,12,8,6,3,1,1,6,1
+46,Sales & Marketing,Marketing Lead,12806.15,23,1,4,2,1,3,No,8,7,2,0,2,3,1,6,0
+31,Product Management,UX Designer,6558.64,19,3,2,1,2,3,No,8,3,2,0,0,0,3,2,0
+34,Software Engineering,Senior Software Engineer,8881.86,20,3,3,1,4,3,No,2,0,0,0,0,1,0,5,0
+28,Product Management,Product Manager,12010.5,4,4,4,3,4,3,No,4,0,0,0,0,3,2,0,0
+53,Sales & Marketing,Marketing Lead,10950.92,19,3,3,2,2,3,No,8,3,1,0,1,5,1,3,0
+31,Finance & Payroll,Payroll Specialist,7609.85,5,2,2,3,4,3,Yes,10,10,7,0,2,3,2,2,1
+35,Product Management,Product Manager,14344.67,26,3,3,3,3,3,No,14,7,3,0,1,4,1,5,0
+34,Human Resources,HR Specialist,8733.65,9,3,2,2,1,3,No,12,9,7,5,5,5,1,2,1
+23,Human Resources,HR Manager,12249.52,30,3,3,1,1,4,No,1,1,0,0,0,1,2,1,0
+44,Software Engineering,Senior Software Engineer,7789.84,22,3,4,3,3,3,Yes,3,2,1,0,0,2,2,3,0
+36,Sales & Marketing,Marketing Lead,10881.92,19,3,2,3,2,3,Yes,5,0,0,0,0,0,1,4,0
+43,Sales & Marketing,Account Executive,10036.3,35,4,1,4,1,4,No,18,11,1,0,1,4,0,6,0
+27,Sales & Marketing,Marketing Lead,9477.29,2,3,1,2,3,3,Yes,2,0,0,0,0,2,2,4,0
+24,Finance & Payroll,Payroll Specialist,5954.42,16,2,3,3,3,3,Yes,2,0,0,0,0,2,0,5,0
+58,Sales & Marketing,Sales Representative,7060.66,14,3,2,3,3,3,No,6,5,3,2,0,1,1,1,0
+56,Sales & Marketing,Sales Representative,11876.03,21,3,4,3,2,3,No,24,10,8,8,1,8,0,0,0
+58,Human Resources,Recruiter,6100.59,25,3,4,4,3,3,Yes,5,5,2,1,2,2,0,0,0
+51,Finance & Payroll,Financial Analyst,7894.76,8,4,3,3,3,3,Yes,6,2,1,1,0,4,0,1,1
+36,Finance & Payroll,Financial Analyst,6007.32,13,3,1,4,3,3,Yes,2,0,0,0,0,0,1,0,1
+27,Human Resources,HR Specialist,6034.29,30,3,3,2,3,3,No,2,2,2,2,0,2,2,1,0
+58,Human Resources,HR Specialist,10019.92,34,5,1,4,3,3,No,24,3,0,0,0,5,0,3,0
+23,Human Resources,Recruiter,6724.23,20,3,4,2,1,3,No,1,1,0,0,0,0,3,3,1
+48,Sales & Marketing,Account Executive,8237.08,21,4,3,3,3,3,No,12,12,3,3,2,6,0,3,0
+22,Finance & Payroll,Finance Director,15442.2,13,4,1,3,2,4,Yes,1,0,0,0,0,0,2,1,0
+24,Software Engineering,Software Engineer,4970.97,16,1,3,4,4,3,Yes,3,0,0,0,0,0,2,0,0
+50,Finance & Payroll,Finance Director,19659.52,4,3,4,3,3,3,Yes,18,15,5,5,3,2,0,0,0
+34,Human Resources,Recruiter,8895.42,7,1,4,3,3,3,No,13,2,0,0,0,5,2,1,0
+49,Human Resources,Recruiter,10024.6,34,4,3,2,2,3,No,22,0,0,0,0,5,1,4,1
+49,Finance & Payroll,Finance Director,21222.76,13,2,2,2,3,4,Yes,23,2,0,0,0,0,1,4,0
+37,Finance & Payroll,Finance Director,15971.43,9,1,2,2,2,4,No,1,1,1,1,1,1,1,2,0
+56,Software Engineering,Tech Lead,12866.59,20,4,2,4,3,3,Yes,14,7,5,1,3,8,1,0,0
+54,Finance & Payroll,Financial Analyst,6682.86,13,2,3,3,1,3,No,10,2,0,0,0,4,1,4,0
+57,Finance & Payroll,Payroll Specialist,9567.88,14,4,3,3,3,3,No,14,14,8,6,3,8,2,6,0
+39,Finance & Payroll,Financial Analyst,10973.84,35,2,1,1,4,4,Yes,18,3,1,0,0,0,1,1,1
+47,Software Engineering,Senior Software Engineer,9845.64,33,3,3,4,4,3,No,11,4,0,0,0,1,1,2,0
+37,Product Management,UX Designer,9647.32,35,4,1,2,3,3,No,15,11,9,7,3,0,3,0,0
+33,Human Resources,Recruiter,7857.38,6,2,2,1,4,3,No,8,7,6,6,2,2,0,1,0
+28,Finance & Payroll,Finance Director,16987.18,33,1,1,2,2,3,No,2,1,0,0,0,0,0,6,0
+24,Human Resources,HR Specialist,5733.88,28,2,1,3,2,3,No,1,1,1,1,1,0,0,0,0
+22,Software Engineering,Engineering Director,17650.39,11,5,4,2,4,3,No,1,1,0,0,0,0,0,4,0
+50,Software Engineering,Software Engineer,7215.97,3,1,4,1,3,3,No,12,3,2,1,0,1,1,0,0
+37,Product Management,Director of Product,17648.48,8,3,4,4,3,3,No,10,6,4,0,4,1,0,6,0
+54,Sales & Marketing,Account Executive,5269.93,28,2,3,3,2,3,No,5,5,5,2,0,0,2,5,0
+60,Sales & Marketing,Marketing Lead,10889.49,25,2,2,3,3,3,Yes,6,6,6,6,0,1,0,2,0
+50,Human Resources,HR Specialist,9024.7,20,4,2,1,4,3,No,18,6,3,0,1,1,1,1,0
+38,Product Management,Product Manager,14579.47,1,4,4,3,2,3,No,17,13,0,0,0,6,0,1,0
+52,Product Management,Product Manager,17408.15,12,3,3,3,4,3,No,27,6,5,3,4,1,0,1,0
+56,Software Engineering,Software Engineer,8666.89,34,2,3,2,3,3,No,12,4,4,2,2,0,0,2,0
+37,Human Resources,Recruiter,5468.81,4,3,3,3,1,3,No,2,2,2,2,0,0,1,2,0
+48,Finance & Payroll,Financial Analyst,8685.26,31,3,3,3,3,3,Yes,12,1,1,0,1,3,1,3,0
+46,Product Management,Director of Product,17435.54,3,2,4,1,3,3,No,6,4,0,0,0,4,0,0,1
+50,Finance & Payroll,Payroll Specialist,8754.32,28,2,1,3,2,3,No,10,4,2,1,1,5,0,4,0
+59,Sales & Marketing,Sales Representative,13986.93,24,3,4,3,3,3,No,38,20,7,1,6,6,1,1,0
+40,Product Management,Product Manager,14457.39,14,4,4,1,3,3,No,14,12,4,4,4,5,2,0,0
+59,Product Management,UX Designer,12821.71,19,3,2,4,4,3,Yes,29,15,5,5,1,6,0,4,0
+60,Software Engineering,Senior Software Engineer,9512.84,13,2,1,4,1,3,No,6,6,2,0,2,0,2,4,0
+52,Human Resources,HR Manager,17824.66,9,2,2,3,4,4,No,25,6,4,1,0,5,2,3,0
+29,Product Management,UX Designer,6444.43,1,3,1,2,3,4,No,3,1,1,0,0,0,2,4,0
+47,Human Resources,Recruiter,11553.21,31,3,4,2,3,3,No,23,7,4,4,2,4,0,0,0
+55,Software Engineering,Tech Lead,14133.25,35,2,3,2,2,3,No,17,2,1,1,0,5,0,3,0
+23,Product Management,Product Manager,10543.38,17,3,3,2,3,3,Yes,1,0,0,0,0,1,0,4,0
+44,Product Management,UX Designer,7925.65,30,2,2,2,1,4,No,9,9,1,0,0,4,1,6,0
+57,Human Resources,VP of HR,23717.35,3,3,4,3,1,3,No,24,13,6,3,6,5,0,4,0
+25,Product Management,UX Designer,5099.46,21,2,3,2,2,4,No,1,0,0,0,0,1,1,4,0
+40,Sales & Marketing,Account Executive,6051.6,27,2,3,3,3,3,No,4,0,0,0,0,0,1,6,0
+28,Human Resources,HR Manager,13127.42,27,5,3,4,3,3,Yes,6,0,0,0,0,3,1,4,0
+31,Software Engineering,Software Engineer,7678.44,14,2,4,4,4,3,No,7,0,0,0,0,1,0,4,0
+43,Human Resources,HR Specialist,10547.79,29,3,1,1,1,3,No,17,7,1,1,0,1,1,0,1
+39,Product Management,UX Designer,5916.74,21,1,1,2,4,3,No,2,0,0,0,0,1,0,1,0
+26,Sales & Marketing,Sales Representative,4684.53,18,3,2,1,2,3,No,1,1,0,0,0,0,0,1,0
+44,Software Engineering,Engineering Director,17470.69,15,2,3,2,3,3,Yes,5,1,1,1,0,2,1,1,0
+22,Finance & Payroll,Payroll Specialist,6633.13,21,4,1,4,3,3,No,1,1,1,1,1,0,0,1,0
+47,Human Resources,HR Manager,12274.36,15,4,4,3,3,4,Yes,9,7,2,2,0,5,0,6,0
+24,Sales & Marketing,Sales Representative,6526.93,16,3,3,2,4,4,No,2,1,0,0,0,0,2,6,0
+57,Human Resources,HR Specialist,9009.23,27,4,3,4,2,3,No,12,9,9,1,2,1,2,5,1
+37,Human Resources,Recruiter,9367.72,34,5,1,4,3,3,No,15,2,0,0,0,1,1,4,0
+44,Sales & Marketing,Sales Representative,5805.87,12,4,4,3,3,4,No,3,0,0,0,0,1,1,5,0
+59,Product Management,UX Designer,7418.34,27,4,3,2,2,3,Yes,10,6,5,0,3,2,0,5,0
+36,Sales & Marketing,Account Executive,4576.21,32,2,3,3,3,3,No,2,1,1,1,0,1,0,4,0
+27,Software Engineering,Software Engineer,7269.65,24,4,3,3,4,3,No,4,1,0,0,0,2,1,5,0
+57,Software Engineering,Senior Software Engineer,14289.19,35,5,2,3,2,3,No,27,5,1,0,1,3,0,1,0
+56,Product Management,Product Manager,14817.32,26,4,4,4,1,3,No,17,0,0,0,0,2,2,1,0
+37,Software Engineering,Senior Software Engineer,11065.81,25,3,4,4,4,3,Yes,11,6,6,5,1,5,0,0,0
+42,Software Engineering,Engineering Director,19897.62,35,4,3,3,4,4,No,12,0,0,0,0,0,0,3,0
+33,Finance & Payroll,Payroll Specialist,7440.63,18,4,4,3,3,3,No,7,6,6,3,4,1,1,2,0
+22,Human Resources,VP of HR,19461.24,11,3,1,3,2,3,Yes,1,1,0,0,0,1,0,6,0
+28,Finance & Payroll,Payroll Specialist,6698.58,17,4,3,1,3,3,No,2,0,0,0,0,1,1,2,0
+40,Human Resources,VP of HR,20205.43,29,3,1,3,3,3,Yes,4,1,0,0,0,3,1,6,0
+47,Finance & Payroll,Payroll Specialist,8798.27,5,2,3,3,1,4,No,14,7,0,0,0,3,0,5,1
+38,Human Resources,HR Manager,16743.26,17,5,1,1,4,3,No,17,10,6,5,6,6,1,0,0
+50,Sales & Marketing,Marketing Lead,14782.99,24,4,4,3,4,3,No,21,4,0,0,0,5,0,5,0
+34,Product Management,Director of Product,18179.74,3,2,3,1,4,3,No,7,0,0,0,0,3,2,4,0
+57,Human Resources,VP of HR,19581.53,9,2,2,3,3,3,No,4,3,0,0,0,3,1,3,0
+36,Software Engineering,Software Engineer,6772.22,17,4,4,1,2,3,No,3,1,1,1,0,0,2,6,0
+52,Product Management,Product Manager,19243.39,25,4,4,3,3,3,Yes,30,20,5,0,2,7,1,5,0
+34,Software Engineering,Tech Lead,9433.04,33,3,3,4,1,3,No,1,0,0,0,0,0,2,2,0
+39,Human Resources,VP of HR,18165.31,35,2,3,4,3,3,No,2,2,1,1,0,0,0,4,0
+30,Human Resources,Recruiter,6537.35,35,4,2,2,3,3,Yes,4,0,0,0,0,0,1,0,0
+53,Software Engineering,Software Engineer,8269.29,26,2,3,1,2,3,Yes,14,6,2,1,0,2,0,1,0
+59,Product Management,Director of Product,22429.52,14,5,3,3,3,3,Yes,22,14,2,2,2,3,2,6,1
+24,Sales & Marketing,Account Executive,6917.03,6,2,3,2,2,3,No,2,2,2,2,2,2,1,3,0
+51,Software Engineering,Engineering Director,17744.47,5,4,3,2,4,3,No,10,9,5,2,1,3,0,6,0
+33,Software Engineering,Tech Lead,11660.1,25,4,3,1,2,3,No,3,3,3,1,2,2,1,1,0
+24,Human Resources,HR Manager,12308.13,34,2,4,3,1,3,No,1,0,0,0,0,1,0,3,0
+53,Software Engineering,Tech Lead,12299.8,29,3,2,3,2,3,No,15,10,10,0,4,5,0,4,0
+60,Finance & Payroll,Financial Analyst,11438.18,24,1,2,1,4,3,No,28,2,0,0,0,0,2,6,0
+25,Finance & Payroll,Payroll Specialist,5996.94,17,2,4,3,1,3,No,1,0,0,0,0,0,2,1,1
+39,Finance & Payroll,Financial Analyst,8057.8,17,3,1,3,3,3,Yes,13,0,0,0,0,7,1,3,1
+53,Product Management,UX Designer,8869.1,7,3,3,4,2,3,Yes,13,9,7,4,2,6,1,2,0
+44,Human Resources,HR Manager,17560.48,20,3,3,1,4,3,No,22,18,1,0,0,3,1,3,0
+29,Human Resources,Recruiter,5868.33,25,3,4,3,3,4,No,3,3,0,0,0,1,1,1,1
+31,Software Engineering,Software Engineer,5251.61,25,4,3,2,3,3,Yes,1,1,0,0,0,0,1,0,0
+39,Human Resources,VP of HR,20974.09,15,3,3,3,3,3,No,13,6,5,2,5,5,1,1,0
+59,Software Engineering,Software Engineer,8288.92,35,1,2,2,2,3,Yes,8,8,5,2,4,3,0,4,0
+34,Finance & Payroll,Payroll Specialist,5921.51,12,4,3,3,2,3,Yes,6,3,3,1,2,2,0,6,0
+53,Product Management,Director of Product,18679.85,32,1,4,2,2,3,No,7,0,0,0,0,0,0,5,0
+36,Sales & Marketing,Account Executive,8131.24,15,1,4,1,4,3,No,11,5,3,3,2,5,1,0,1
+57,Sales & Marketing,Sales Representative,12376.83,5,2,2,2,2,3,No,28,2,2,2,0,1,0,4,1
+26,Software Engineering,Engineering Director,18484.35,21,3,2,3,2,4,No,4,0,0,0,0,0,0,2,0
+35,Finance & Payroll,Financial Analyst,6968.96,6,3,1,4,3,3,Yes,6,5,0,0,0,0,0,6,0
+41,Software Engineering,Engineering Director,20422.37,13,4,2,2,1,3,No,15,1,0,0,0,5,2,5,0
+29,Software Engineering,Senior Software Engineer,8621.81,18,3,2,2,4,3,No,4,3,2,0,0,1,0,0,0
+34,Sales & Marketing,Sales Representative,9098.52,34,3,3,1,2,4,No,12,0,0,0,0,3,0,2,0
+42,Product Management,UX Designer,8077.39,12,2,1,3,1,3,No,11,5,3,2,0,6,2,6,1
+33,Sales & Marketing,Account Executive,6732.62,6,3,1,1,4,3,Yes,3,2,0,0,0,2,0,4,0
+59,Product Management,Product Manager,12616.88,20,3,4,2,3,3,Yes,3,0,0,0,0,0,1,1,0
+35,Product Management,UX Designer,6979.52,10,4,3,2,4,3,Yes,8,4,3,0,2,1,2,5,0
+31,Finance & Payroll,Finance Director,15835.56,32,2,2,3,4,3,Yes,3,2,0,0,0,0,0,3,0
+35,Software Engineering,Engineering Director,17104.23,19,3,4,3,3,4,No,5,1,0,0,0,2,1,6,0
+56,Sales & Marketing,Marketing Lead,10661.01,24,4,3,2,3,3,No,1,0,0,0,0,0,0,3,0
+28,Software Engineering,Engineering Director,17477.83,33,3,1,3,2,3,Yes,3,1,0,0,0,0,0,3,0
+39,Human Resources,VP of HR,22121.32,30,3,3,3,4,3,No,17,16,4,4,4,5,1,4,0
+24,Software Engineering,Senior Software Engineer,9086.48,5,2,3,4,1,3,No,2,1,1,0,1,2,2,6,0
+47,Software Engineering,Engineering Director,16962.78,9,3,4,1,4,3,Yes,6,6,5,3,0,4,0,1,0
+42,Software Engineering,Tech Lead,14696.7,6,2,2,3,3,3,No,21,5,5,5,0,8,1,1,0
+56,Sales & Marketing,Marketing Lead,16410.21,32,3,3,4,3,3,Yes,23,9,4,2,4,5,1,4,0
+51,Product Management,UX Designer,9315.04,6,2,4,2,3,3,No,16,3,1,0,1,3,1,0,0
+29,Product Management,Director of Product,16556.68,10,2,4,2,2,3,Yes,3,3,2,2,0,2,1,1,0
+59,Sales & Marketing,Sales Representative,11880.18,25,4,2,3,1,3,Yes,23,12,1,0,1,1,0,6,1
+58,Sales & Marketing,Marketing Lead,19249.01,2,3,4,2,3,3,No,33,10,6,2,1,8,0,4,0
+42,Product Management,Product Manager,15032.24,2,3,3,4,3,3,Yes,18,10,5,3,2,7,0,6,0
+43,Software Engineering,Engineering Director,19223.65,27,3,3,4,3,3,No,16,3,1,0,0,4,1,6,0
+51,Human Resources,Recruiter,9804.38,19,3,1,3,2,3,No,19,10,3,0,3,1,1,5,0
+39,Finance & Payroll,Financial Analyst,5763.09,33,3,4,3,4,4,Yes,6,1,0,0,0,2,0,1,0
+53,Product Management,UX Designer,10218.03,19,3,4,4,3,3,No,17,15,5,4,2,3,1,3,0
+35,Human Resources,VP of HR,21555.88,3,3,1,2,3,3,No,11,3,0,0,0,1,0,2,0
+23,Human Resources,Recruiter,5689.34,25,3,4,3,4,3,No,2,1,1,1,1,2,1,6,0
+28,Software Engineering,Tech Lead,11254.91,34,3,3,4,3,3,Yes,5,2,0,0,0,1,2,4,0
+39,Software Engineering,Tech Lead,13026.1,6,3,1,3,1,3,Yes,18,11,1,1,1,0,1,6,0
+46,Sales & Marketing,Account Executive,7059.6,16,3,2,3,4,3,No,10,10,9,6,7,1,1,2,0
+35,Software Engineering,Software Engineer,7246.18,31,4,2,3,3,3,No,9,0,0,0,0,1,2,5,0
+26,Human Resources,HR Manager,11390.74,4,5,3,2,3,3,No,5,5,0,0,0,3,1,5,0
+51,Finance & Payroll,Payroll Specialist,7734.11,29,3,3,4,2,3,No,12,3,0,0,0,0,0,6,0
+53,Product Management,Product Manager,18589.69,35,3,2,4,4,3,No,30,13,6,2,2,8,1,4,0
+60,Sales & Marketing,Marketing Lead,14344.05,9,4,4,4,2,3,Yes,14,7,0,0,0,0,0,6,0
+34,Product Management,UX Designer,8265.73,16,1,2,3,2,3,No,9,8,1,0,1,4,2,4,0
+51,Finance & Payroll,Financial Analyst,5515.02,15,1,4,1,3,3,Yes,5,4,3,1,1,3,0,5,0
+28,Human Resources,HR Specialist,7674.62,29,3,2,4,3,3,Yes,5,5,1,1,1,0,2,2,0
+58,Sales & Marketing,Account Executive,7184.99,30,3,3,1,4,3,No,12,1,0,0,0,5,0,6,0
+38,Finance & Payroll,Payroll Specialist,6510.39,23,3,2,1,2,3,No,3,1,0,0,0,1,1,6,1
+52,Software Engineering,Senior Software Engineer,13733.33,26,4,4,2,2,4,No,25,7,0,0,0,3,0,5,0
+37,Human Resources,HR Specialist,9808.32,3,3,3,1,3,4,No,16,2,2,2,2,7,2,2,1
+24,Software Engineering,Software Engineer,5764.88,32,2,3,1,3,3,No,1,0,0,0,0,1,0,1,1
+22,Sales & Marketing,Account Executive,4387.66,27,3,1,3,4,3,No,1,0,0,0,0,0,0,1,0
+53,Finance & Payroll,Finance Director,20575.54,4,3,1,2,2,3,No,14,10,7,4,6,6,1,6,1
+47,Finance & Payroll,Finance Director,16090.28,19,2,4,2,3,3,No,3,0,0,0,0,1,0,1,0
+35,Finance & Payroll,Financial Analyst,8880.2,14,4,1,4,4,3,Yes,14,14,5,2,0,3,0,1,0
+44,Sales & Marketing,Sales Representative,6634.13,5,5,4,3,3,3,No,8,6,1,0,1,0,1,2,1
+31,Human Resources,HR Manager,14443.42,18,3,1,2,3,3,No,8,1,1,1,1,2,0,6,1
+22,Human Resources,HR Manager,12584.85,12,2,3,3,3,4,No,1,0,0,0,0,0,3,4,0
+39,Software Engineering,Engineering Director,18716.09,10,5,4,2,3,3,Yes,6,4,0,0,0,4,0,1,1
+22,Sales & Marketing,Account Executive,5578.9,2,2,2,4,4,3,No,1,1,1,1,0,1,1,4,0
+51,Sales & Marketing,Marketing Lead,11318.62,28,4,2,2,4,3,Yes,5,2,0,0,0,0,2,1,0
+32,Software Engineering,Senior Software Engineer,8884.98,13,3,2,4,3,3,Yes,1,1,0,0,0,1,0,3,1
+27,Software Engineering,Tech Lead,10663.9,7,3,4,3,3,3,No,2,2,0,0,0,1,1,2,0
+49,Product Management,Product Manager,12886.37,19,3,2,3,1,3,Yes,5,2,1,0,0,0,1,3,0
+55,Human Resources,HR Specialist,11262.75,15,3,4,4,3,3,No,25,4,1,1,0,7,0,5,0
+46,Product Management,UX Designer,9348.65,7,3,4,3,3,3,Yes,20,6,1,1,1,5,2,4,1
+47,Human Resources,HR Manager,12850.29,25,2,2,1,3,3,Yes,2,0,0,0,0,0,1,0,0
+46,Human Resources,VP of HR,20177.09,9,1,3,2,2,4,No,9,2,1,0,1,1,0,5,0

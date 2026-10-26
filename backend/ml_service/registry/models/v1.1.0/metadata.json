@@ -1,0 +1,71 @@
+{
+  "version": "v1.1.0",
+  "artifact_file": "attrition_pipeline.joblib",
+  "artifact_path": "C:\\Users\\Visha\\.gemini\\antigravity\\scratch\\enterprise-hrms\\backend\\ml_service\\registry\\models\\v1.1.0\\attrition_pipeline.joblib",
+  "checksum_sha256": "0661a8954e121bd0eab59055c39ffeff3f6448be7cc24f0e5467c2ca89c64722",
+  "model_type": "LogisticRegression",
+  "features": {
+    "numerical": [
+      "age",
+      "monthly_income",
+      "distance_from_home",
+      "education_level",
+      "environment_satisfaction",
+      "job_satisfaction",
+      "work_life_balance",
+      "performance_rating",
+      "total_working_years",
+      "years_at_company",
+      "years_in_current_role",
+      "years_since_last_promotion",
+      "years_with_curr_manager",
+      "num_companies_worked",
+      "stock_option_level",
+      "training_times_last_year"
+    ],
+    "categorical": [
+      "department",
+      "job_role",
+      "overtime"
+    ]
+  },
+  "training_config": {
+    "model_type": "LogisticRegression",
+    "max_iter": 1000,
+    "class_weight": "balanced",
+    "random_state": 42,
+    "cv_roc_auc_mean": 0.6601
+  },
+  "dataset_provenance": {
+    "dataset_name": "HR-ATTRITION-BENCHMARK-v1",
+    "provenance_doc": "dataset/provenance.md",
+    "train_samples": 1175,
+    "test_samples": 295,
+    "class_balance_train": 0.1336,
+    "class_balance_test": 0.1356,
+    "pii_excluded": true,
+    "features_count": 19
+  },
+  "metrics": {
+    "accuracy": 0.6271,
+    "majority_class_baseline_accuracy": 0.8644,
+    "precision": 0.1875,
+    "recall": 0.525,
+    "f1_score": 0.2763,
+    "roc_auc": 0.6227,
+    "confusion_matrix": [
+      [
+        164,
+        91
+      ],
+      [
+        19,
+        21
+      ]
+    ]
+  },
+  "created_at": "2026-10-26T09:12:55.973580",
+  "approval_status": "ARCHIVED",
+  "is_production": false,
+  "promoted_at": "2026-10-26T09:12:56.014854"
+}
